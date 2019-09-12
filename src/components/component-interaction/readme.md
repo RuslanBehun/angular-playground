@@ -18,4 +18,4 @@ For component interaction and passing data from one component to another you hav
 5. Via Services. Parent and child communicate via a services. 
    
 ####Description:
-Let's create two components, one is **classes** in school and another is a class **pupils**
+Let's create two components, one is **classes** in school and another is a class **pupils** and interact between them.   

@@ -1,0 +1,7 @@
+<ul class="apg-list">
+  <ng-container *ngFor="let classPupil of classPupils">
+    <li *ngIf="classPupil.schoolClassId == 1">
+      {{fullName(classPupil)}} - {{classPupil | json}}
+    </li>
+  </ng-container>
+</ul>

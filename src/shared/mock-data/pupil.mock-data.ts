@@ -1,6 +1,6 @@
-import { Pupil } from '../interafaces/pupil.interface';
+import { Pupil } from '@interfaces/pupil.interface';
 
-const PUPILS: Pupil[] = [];
+export const PUPILS: Pupil[] = [];
 
 const pupil1: Pupil = {
   id: 1,
@@ -26,7 +26,7 @@ const pupil2: Pupil = {
 
 const pupil3: Pupil = {
   id: 3,
-  firstName: 'Jaroslav',
+  firstName: 'Jason',
   lastName: 'Kuzbechkin',
   yearOfBirth: 1971,
   monthOfBirth: 11,

@@ -1,0 +1,95 @@
+SCHOOL_CLASSES:{{schoolClasses | json}}
+
+<div *ngFor="let schoolClass of schoolClasses">
+  {{schoolClass | json}}
+</div>
+
+
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+    <ng-container *ngFor="let schoolClass of schoolClasses; let i = index">
+      <a href="#id-{{schoolClassName(schoolClass)}}-panel"
+         class="mdl-tabs__tab"
+         [ngClass]="{'is-active': i == 0}">
+        {{schoolClassName(schoolClass)}}
+      </a>
+    </ng-container>
+  </div>
+
+  <ng-container *ngFor="let schoolClass of schoolClasses; let i = index">
+    <div class="mdl-tabs__panel"
+         id="id-{{schoolClassName(schoolClass)}}-panel"
+         [ngClass]="{'is-active': i == 0}">
+      <h5 class="apg-list-title">Pupils:</h5>
+      <apg-pupil [classPupils]="pupils"></apg-pupil>
+      <!--<ul class="apg-list">
+        <li>Tywin</li>
+        <li>Cersei</li>
+        <li>Jamie</li>
+        <li>Tyrion</li>
+      </ul>-->
+    </div>
+  </ng-container>
+
+  <!--<div class="mdl-tabs__panel is-active" id="starks-panel">
+    <ul>
+      <li>Eddard</li>
+      <li>Catelyn</li>
+      <li>Robb</li>
+      <li>Sansa</li>
+      <li>Brandon</li>
+      <li>Arya</li>
+      <li>Rickon</li>
+    </ul>
+  </div>
+  <div class="mdl-tabs__panel" id="lannisters-panel">
+    <ul>
+      <li>Tywin</li>
+      <li>Cersei</li>
+      <li>Jamie</li>
+      <li>Tyrion</li>
+    </ul>
+  </div>
+  <div class="mdl-tabs__panel" id="targaryens-panel">
+    <ul>
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
+  </div>-->
+</div>
+
+<br><br><br><br>
+
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+    <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
+    <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
+    <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
+  </div>
+
+  <div class="mdl-tabs__panel is-active" id="starks-panel">
+    <ul>
+      <li>Eddard</li>
+      <li>Catelyn</li>
+      <li>Robb</li>
+      <li>Sansa</li>
+      <li>Brandon</li>
+      <li>Arya</li>
+      <li>Rickon</li>
+    </ul>
+  </div>
+  <div class="mdl-tabs__panel" id="lannisters-panel">
+    <ul>
+      <li>Tywin</li>
+      <li>Cersei</li>
+      <li>Jamie</li>
+      <li>Tyrion</li>
+    </ul>
+  </div>
+  <div class="mdl-tabs__panel" id="targaryens-panel">
+    <ul>
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
+  </div>
+</div>

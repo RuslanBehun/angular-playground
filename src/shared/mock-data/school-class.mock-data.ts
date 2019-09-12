@@ -1,6 +1,6 @@
-import { SchoolClass } from '../interafaces/school-class.interface';
+import { SchoolClass } from '@interfaces/school-class.interface';
 
-const SCHOOL_CLASSES: SchoolClass[] = [];
+export const SCHOOL_CLASSES: SchoolClass[] = [];
 
 const schoolClass1: SchoolClass = {
   id: 1,
