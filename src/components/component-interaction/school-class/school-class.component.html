@@ -1,7 +1,9 @@
-SCHOOL_CLASSES:{{schoolClasses | json}}
-
 <div *ngFor="let schoolClass of schoolClasses">
   {{schoolClass | json}}
+</div>
+<br>
+<div *ngFor="let pupil of pupils">
+  {{pupil | json}}
 </div>
 
 
@@ -21,46 +23,16 @@ SCHOOL_CLASSES:{{schoolClasses | json}}
          id="id-{{schoolClassName(schoolClass)}}-panel"
          [ngClass]="{'is-active': i == 0}">
       <h5 class="apg-list-title">Pupils:</h5>
-      <apg-pupil [classPupils]="pupils"></apg-pupil>
-      <!--<ul class="apg-list">
-        <li>Tywin</li>
-        <li>Cersei</li>
-        <li>Jamie</li>
-        <li>Tyrion</li>
-      </ul>-->
+      <apg-pupils
+        [classPupils]="pupils"
+        [id]="schoolClass.id"></apg-pupils>
     </div>
   </ng-container>
-
-  <!--<div class="mdl-tabs__panel is-active" id="starks-panel">
-    <ul>
-      <li>Eddard</li>
-      <li>Catelyn</li>
-      <li>Robb</li>
-      <li>Sansa</li>
-      <li>Brandon</li>
-      <li>Arya</li>
-      <li>Rickon</li>
-    </ul>
-  </div>
-  <div class="mdl-tabs__panel" id="lannisters-panel">
-    <ul>
-      <li>Tywin</li>
-      <li>Cersei</li>
-      <li>Jamie</li>
-      <li>Tyrion</li>
-    </ul>
-  </div>
-  <div class="mdl-tabs__panel" id="targaryens-panel">
-    <ul>
-      <li>Viserys</li>
-      <li>Daenerys</li>
-    </ul>
-  </div>-->
 </div>
 
-<br><br><br><br>
+<!--<br><br><br><br>-->
 
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+<!--<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
     <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
     <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
@@ -92,4 +64,4 @@ SCHOOL_CLASSES:{{schoolClasses | json}}
       <li>Daenerys</li>
     </ul>
   </div>
-</div>
+</div>-->

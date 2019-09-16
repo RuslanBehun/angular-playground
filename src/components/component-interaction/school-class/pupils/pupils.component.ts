@@ -3,12 +3,14 @@ import { Pupil } from '@interfaces/pupil.interface';
 import { PupilClass } from '@shared/classes/pupil.class';
 
 @Component({
-  selector: 'apg-pupil',
-  templateUrl: './pupil.component.html',
-  styleUrls: ['./pupil.component.scss']
+  selector: 'apg-pupils',
+  templateUrl: './pupils.component.html',
+  styleUrls: ['./pupils.component.scss']
 })
-export class PupilComponent extends PupilClass implements OnInit {
+export class PupilsComponent extends PupilClass implements OnInit {
   @Input() classPupils: Pupil[];
+  // tslint:disable-next-line:no-input-rename
+  @Input('id') schoolClassId: number;
 
   constructor() {
     super();
